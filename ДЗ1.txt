@@ -1,0 +1,40 @@
+-- монтирование оптического диска с guest additions
+- запуска установки virtualbox гостевых дополнений
+-- установка недостоющих зависимостей gcc make perl
+
+Нажать устройства - подключить образ диска Дополнений гостевой
+sudo apt-get update
+sudo apt-get install gcc make perl
+
+монтировка
+mount | grep sr0
+
+sudo mkdir /media/kochneva/additions     создаем монтировку
+
+sudo mount /dev/sr0 /media/kochneva/additions
+
+sudo ./autorun.sh
+
+
+
+top  для просмотра задач, как диспетчер задач
+uptime
+cap /proc/cpuinfo     просмотр иноф цпу
+
+python3 подключаем питон
+
+free -h         посмотреть память
+
+sudo apt-get install update openssh-server  для подключения ssh
+sudo systemctl start sshd
+sudo systemctl status sshd
+sudo apt-get install net-tools
+sudo netstat -tlnp
+ip a
+
+
+ssh-keygen
+cat /home/kochneva/.ssh/id_rsa
+cp ~/.ssh/id_rsa.pub ~/.ssh/authorized_keys
+sudo poweroff
+
